@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmnls:xsi="http://www.w3.org/2001/XMLScheme-instance">
+	<display-name>URLFileNameCtrl</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>		
+	</welcome-file-list>
+	
+	<!-- default -->
+	<servlet>
+	<servlet-name>forward</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/forward-servlet.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>	
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>forward</servlet-name>
+	<url-pattern>*.ds</url-pattern>
+	</servlet-mapping>
+</web-app>
